@@ -1,0 +1,16 @@
+.wrapper {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.mapContainer {
+  position: absolute;
+  inset: 0;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: all;
+}

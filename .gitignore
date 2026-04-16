@@ -1,0 +1,37 @@
+# 루트의 모든 항목 무시 (/ 앞에 붙이면 루트 기준)
+/*
+
+# .gitignore 자체는 커밋
+!/.gitignore
+
+# GitHub Actions
+!/.github/
+
+# suhang_kim 폴더만 허용
+!/suhang_kim/
+
+# OSM 캐시 데이터 (용량 크고 재다운로드 가능)
+suhang_kim/backend/data/
+
+# ── suhang_kim 내부 무시 ───────────────────────────────────
+# Python 가상환경 & 캐시
+suhang_kim/backend/venv/
+suhang_kim/**/__pycache__/
+suhang_kim/**/*.pyc
+suhang_kim/backend/cache/
+suhang_kim/backend/data/
+# 구 버전 RL 관련 모듈
+suhang_kim/backend/app/ws/
+suhang_kim/backend/app/models/rl_models.py
+
+# Node 의존성 & 빌드 결과물
+suhang_kim/frontend/node_modules/
+suhang_kim/frontend/dist/
+
+# 환경 변수 (API 키 노출 방지)
+suhang_kim/frontend/.env
+suhang_kim/frontend/.env.*
+
+# OS / 에디터 잡파일
+.DS_Store
+Thumbs.db

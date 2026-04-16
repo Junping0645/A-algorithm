@@ -1,0 +1,226 @@
+.panel {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 12px 0 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+
+.logoA { font-size: 22px; font-weight: 800; color: var(--astar-color); }
+.logoVs { font-size: 13px; color: var(--text-muted); }
+.logoRL { font-size: 22px; font-weight: 800; color: #f0883e; }
+.logoSub { font-size: 11px; color: var(--text-muted); margin-left: 4px; }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.primaryBtn {
+  padding: 8px 12px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: all 0.15s;
+  margin-top: 4px;
+}
+
+.primaryBtn:hover:not(:disabled) {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.primaryBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.astarBtn:hover:not(:disabled) {
+  border-color: var(--astar-color);
+  color: var(--astar-color);
+  background: rgba(88,166,255,0.08);
+}
+
+.rlBtn:hover:not(:disabled) {
+  border-color: var(--rl-color);
+  color: var(--rl-color);
+  background: rgba(63,185,80,0.08);
+}
+
+.dangerBtn {
+  padding: 8px 12px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(248,81,73,0.1);
+  border: 1px solid var(--accent-red);
+  color: var(--accent-red);
+  margin-top: 4px;
+  transition: all 0.15s;
+}
+
+.dangerBtn:hover { background: rgba(248,81,73,0.2); }
+
+.info {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.nodeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.nodeLabel { font-size: 12px; font-weight: 600; }
+.nodeVal { font-size: 12px; font-family: 'JetBrains Mono', monospace; color: var(--text-muted); }
+
+.hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.resultBox {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.resultRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.resultRow span:first-child { color: var(--text-muted); }
+.resultRow span:last-child { font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+
+/* 태그 입력 */
+.tagBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 5px 8px;
+  cursor: text;
+  min-height: 34px;
+  align-items: center;
+}
+
+.tagBox:focus-within { border-color: var(--accent-blue); }
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(88,166,255,0.15);
+  border: 1px solid rgba(88,166,255,0.4);
+  color: var(--accent-blue);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.tagRemove {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+  padding: 0;
+  opacity: 0.7;
+}
+.tagRemove:hover { opacity: 1; }
+
+.tagInput {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-size: 12px;
+  min-width: 80px;
+  flex: 1;
+  padding: 0;
+}
+
+/* 버튼 행 */
+.btnRow {
+  display: flex;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+/* 병원 버튼 */
+.hospitalBtn {
+  padding: 6px 10px;
+  border-radius: 7px;
+  font-size: 15px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.hospitalBtn:hover:not(:disabled) {
+  border-color: #f85149;
+  background: rgba(248,81,73,0.08);
+}
+.hospitalBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.compareBtn:hover:not(:disabled) {
+  border-color: #f0883e;
+  color: #f0883e;
+  background: rgba(240,136,62,0.08);
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.legendDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
