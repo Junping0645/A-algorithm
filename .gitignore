@@ -10,8 +10,8 @@
 # suhang_kim 폴더만 허용
 !/suhang_kim/
 
-# OSM 캐시 데이터 (용량 크고 재다운로드 가능)
-suhang_kim/backend/data/
+# osmnx HTTP 캐시 (불필요)
+suhang_kim/backend/cache/
 
 # ── suhang_kim 내부 무시 ───────────────────────────────────
 # Python 가상환경 & 캐시
